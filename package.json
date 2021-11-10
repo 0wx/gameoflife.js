@@ -1,0 +1,30 @@
+{
+  "name": "gameoflife.js",
+  "description": "A library for John Conway's Game of Life",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0wx/gameoflife.js.git"
+  },
+  "keywords": [
+    "gameoflife",
+    "gol",
+    "game"
+  ],
+  "author": "Gilang Ramadhan",
+  "bugs": {
+    "url": "https://github.com/0wx/gameoflife.js/issues"
+  },
+  "homepage": "https://github.com/0wx/gameoflife.js#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.7",
+    "typescript": "^4.4.4"
+  }
+}
