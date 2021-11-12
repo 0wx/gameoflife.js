@@ -1,7 +1,7 @@
 {
   "name": "gameoflife.js",
   "description": "A library for John Conway's Game of Life",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "license": "MIT",

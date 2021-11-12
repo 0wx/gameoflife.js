@@ -1,4 +1,4 @@
-import { GameOfLife, Cell, Position, GameOfLifeConstructor } from "./gameOfLife"
+import { GameOfLife, Cell, Position } from "./gameOfLife"
 
-export { GameOfLife, Cell, Position, GameOfLifeConstructor }
+export { GameOfLife, Cell, Position }
 export default GameOfLife
