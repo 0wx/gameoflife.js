@@ -2,7 +2,7 @@ export interface Position {
   width: number
   height: number
 }
-export interface GameOfLifeConstructor {
+interface GameOfLifeConstructor {
   width: number
   height: number
   initialCell?: Position[]
@@ -53,7 +53,36 @@ export class GameOfLife {
       return result.filter((v) => v > -1)
     })
   }
-
+  add = (cells: Position[]) => {
+    this.cells = this.cells.map((h, i) => {
+      return h.map((w, j) => {
+        if (cells.find(({ width, height }) => width === j && height === i))
+          return 1
+        return w
+      })
+    })
+    return this.cells
+  }
+  remove = (cells: Position[]) => {
+    this.cells = this.cells.map((h, i) => {
+      return h.map((w, j) => {
+        if (cells.find(({ width, height }) => width === j && height === i))
+          return 0
+        return w
+      })
+    })
+    return this.cells
+  }
+  toogle = (cells: Position[]) => {
+    this.cells = this.cells.map((h, i) => {
+      return h.map((w, j) => {
+        if (cells.find(({ width, height }) => width === j && height === i))
+          return w === 1 ? 0 : 1
+        return w
+      })
+    })
+    return this.cells
+  }
   next = () => {
     const neighbors = this.neighbors()
     const data = this.cells.flat()
@@ -74,4 +103,3 @@ export class GameOfLife {
     return this.cells
   }
 }
-
